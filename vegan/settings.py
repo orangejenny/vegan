@@ -12,10 +12,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_PATH = os.path.join(BASE_DIR, os.pardir)
-VEGAN_PATH = os.path.join(PROJECT_PATH, 'vegan/vegan')
-
 PROJECT_PATH = os.path.abspath(PROJECT_PATH)
-VEGAN_PATH = os.path.abspath(VEGAN_PATH)
 
 # Static files
 STATIC_ROOT = 'staticfiles'
@@ -66,7 +63,8 @@ WSGI_APPLICATION = 'vegan.wsgi.application'
 # Templates
 
 TEMPLATE_DIRS = (
-  os.path.join(VEGAN_PATH, 'templates')
+  os.path.join(PROJECT_PATH, 'vegan/templates'),
+  os.path.join(PROJECT_PATH, 'vegan/vegan/templates'),
 )
 
 # Database
