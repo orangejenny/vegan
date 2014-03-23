@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static "vegan/css/main.css" %}" />
+    <script type="text/javascript src="{% static "vegan/js/main.js" %}"></script>
+    <title>Dishes</title>
+  </head>
+
+  <body>
+    Hello vegans, have some {{ dish }}!
+    <br>
+    <img src="{% static "vegan/images/curry.jpg" %}" alt="Picture of {{ dish }}" />
+  </body>
+</html>
