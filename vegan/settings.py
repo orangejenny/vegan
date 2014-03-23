@@ -13,13 +13,14 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_PATH = os.path.join(BASE_DIR, os.pardir)
 PROJECT_PATH = os.path.abspath(PROJECT_PATH)
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'vegan/templates')
 
 # Static files
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_PATH, 'static'),
+  os.path.join(PROJECT_PATH, 'static'),
 )
 
 # Quick-start development settings - unsuitable for production
@@ -63,9 +64,10 @@ WSGI_APPLICATION = 'vegan.wsgi.application'
 # Templates
 
 TEMPLATE_DIRS = (
-  os.path.join(PROJECT_PATH, 'templates'),
-  os.path.join(PROJECT_PATH, 'vegan/templates'),
-  os.path.join(PROJECT_PATH, 'vegan/vegan/templates'),
+  TEMPLATE_PATH
+  #os.path.join(PROJECT_PATH, 'templates'),
+  #os.path.join(PROJECT_PATH, 'vegan/templates'),
+  #os.path.join(PROJECT_PATH, 'vegan/vegan/templates'),
 )
 
 # Database
