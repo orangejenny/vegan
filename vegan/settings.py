@@ -18,7 +18,8 @@ STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-  os.path.join(os.path.abspath(PROJECT_PATH), 'static'),
+  #os.path.join(os.path.abspath(BASE_DIR), 'static'),
+  os.path.join(BASE_DIR, 'vegan/static'),
 )
 
 # Quick-start development settings - unsuitable for production
